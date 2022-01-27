@@ -92,6 +92,23 @@ public class QueryProcessor {
 
         }
 
+        if (query.toLowerCase().contains("square and a cube")) {
+            String q = query.replaceAll("[A-Z|a-z]","");
+            String[] nums =  q.split(":");
+            nums = nums[1].split(" ");
+
+            for (String n : nums) {
+                if (!n.equals("")) {
+                    int num = Integer.parseInt(n);
+                    if (Math.sqrt(num)% 1 == 0 && Math.cbrt(num) % 1 == 0) {
+                        return n;
+                    }
+                }
+
+            }
+            return "";
+
+        }
 
 
         return "";

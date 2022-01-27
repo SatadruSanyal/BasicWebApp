@@ -30,4 +30,16 @@ public class QueryProcessorTest {
     public void isNotCaseSensitive() throws Exception {
         assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
     }
+
+    @Test
+    public void knowsAboutDimSum() throws Exception {
+        assertThat(queryProcessor.process("dimsum"),
+                containsString("Chinese"));
+    }
+
+    @Test
+    public void knowsAboutUSA() throws Exception {
+        assertThat(queryProcessor.process("america"),
+                containsString("country"));
+    }
 }

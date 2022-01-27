@@ -19,6 +19,11 @@ public class QueryProcessor {
                     "China and are commonly associated with Cantonese cuisine, although dim sum " +
                     "dishes also exist in other Chinese cuisines.";
         }
+
+        if (query.toLowerCase().contains("america")) {
+            return "The United States of America is a country in the North American Continent.";
+        }
+
         return "";
     }
 }

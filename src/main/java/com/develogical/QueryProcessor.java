@@ -10,7 +10,14 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("imperial")) {
-            return "Imperial College is a university in London";
+            return "Imperial College is a university in London.";
+        }
+
+        if (query.toLowerCase().contains("dimsum")) {
+            return "Dim sum is a large range of small Chinese dishes that are traditionally " +
+                    "enjoyed in restaurants for brunch. Most modern dim sum dishes originated in " +
+                    "China and are commonly associated with Cantonese cuisine, although dim sum " +
+                    "dishes also exist in other Chinese cuisines.";
         }
         return "";
     }

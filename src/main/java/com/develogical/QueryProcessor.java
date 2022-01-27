@@ -112,8 +112,8 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("theresa may")) {
 
-            return "2016";
-
+            return "";
+        }
 
         return "";
     }

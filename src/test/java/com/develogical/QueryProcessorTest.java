@@ -42,4 +42,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("america"),
                 containsString("country"));
     }
+
+    @Test
+    public void knowsAboutCanada() throws Exception {
+        assertThat(queryProcessor.process("canada"),
+                containsString("north"));
+    }
 }

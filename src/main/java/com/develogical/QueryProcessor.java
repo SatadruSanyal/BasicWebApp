@@ -24,6 +24,10 @@ public class QueryProcessor {
             return "The United States of America is a country in the North American Continent.";
         }
 
+        if (query.toLowerCase().contains("canada")) {
+            return "Canada is the north most country in the North American Continent.";
+        }
+
         return "";
     }
 }

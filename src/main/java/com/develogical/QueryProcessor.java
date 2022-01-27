@@ -54,10 +54,10 @@ public class QueryProcessor {
             String q = query.replaceAll("[A-Z|a-z]","");
             String[] nums =  q.split(" ");
 
-            Integer sum = 1;
+            Long sum = 1l;
             for (String n : nums) {
                 if (!n.equals("")) {
-                    sum*= Integer.parseInt(n);
+                    sum*= Long.parseLong(n);
                 }
 
             }

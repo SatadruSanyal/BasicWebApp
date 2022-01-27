@@ -74,4 +74,10 @@ public class QueryProcessorTest {
                 containsString("none"));
     }
 
+    @Test
+    public void canMinusNumbers() throws Exception {
+        assertThat(queryProcessor.process("what is 2020 minus 30"),
+                containsString("1990"));
+    }
+
 }

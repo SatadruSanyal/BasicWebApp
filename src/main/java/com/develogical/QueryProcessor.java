@@ -115,6 +115,29 @@ public class QueryProcessor {
             return "";
         }
 
+        if (query.toLowerCase().contains("minus")) {
+            String q = query.replaceAll("[A-Z|a-z]","");
+            String[] nums =  q.split(" ");
+
+            Integer sum = 0;
+            for (String n : nums) {
+                if (!n.equals("")) {
+                    if (0 == sum) {
+                        sum+= Integer.parseInt(n);
+                    } else {
+                        sum -= Integer.parseInt(n);
+                    }
+
+                }
+
+            }
+            String s = sum.toString();
+
+            return s;
+        }
+
         return "";
     }
+
+
 }

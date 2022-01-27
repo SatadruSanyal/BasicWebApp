@@ -50,6 +50,22 @@ public class QueryProcessor {
             return s;
         }
 
+        if (query.toLowerCase().contains("which of the following ")) {
+            String q = query.replaceAll("[A-Z|a-z]","");
+            String[] nums =  q.split(":");
+            nums = nums[1].split(" ");
+
+            Integer largest = 0;
+            for (String n : nums) {
+                if (!n.equals("")) {
+                    largest = Math.max(largest, Integer.parseInt(n));
+                }
+
+            }
+            return largest.toString();
+
+        }
+
 
 
         return "";

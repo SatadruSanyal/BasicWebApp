@@ -54,4 +54,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is 2020 plus 30"),
                 containsString("2050"));
     }
+
+    @Test
+    public void canReturnGreaterNumber() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is largest: 2020 2030"),
+                containsString("2030"));
+    }
 }

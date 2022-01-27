@@ -28,6 +28,10 @@ public class QueryProcessor {
             return "Canada is the north most country in the North American Continent.";
         }
 
+        if (query.toLowerCase().contains("your name")) {
+            return "PingPong";
+        }
+
         return "";
     }
 }

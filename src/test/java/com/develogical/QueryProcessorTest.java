@@ -48,4 +48,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("canada"),
                 containsString("north"));
     }
+
+    @Test
+    public void canAddNumbers() throws Exception {
+        assertThat(queryProcessor.process("what is 2020 plus 30"),
+                containsString("2050"));
+    }
 }

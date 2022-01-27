@@ -1,5 +1,7 @@
 package com.develogical;
 
+import java.util.Arrays;
+
 public class QueryProcessor {
 
     public String process(String query) {
@@ -31,6 +33,24 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("your name")) {
             return "PingPong";
         }
+
+        if (query.toLowerCase().contains("what is ")) {
+            String q = query.replaceAll("[A-Z|a-z]","");
+            String[] nums =  q.split(" ");
+
+            Integer sum = 0;
+            for (String n : nums) {
+                if (!n.equals("")) {
+                    sum+= Integer.parseInt(n);
+                }
+
+            }
+            String s = sum.toString();
+
+            return s;
+        }
+
+
 
         return "";
     }

@@ -60,4 +60,11 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("which of the following numbers is largest: 2020 2030"),
                 containsString("2030"));
     }
+
+    @Test
+    public void canMultiplyNumbers() throws Exception {
+        Integer x = 2020 * 30;
+        assertThat(queryProcessor.process("what is 2020 multiplied by 30"),
+                containsString(x.toString()));
+    }
 }

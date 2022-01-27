@@ -50,6 +50,22 @@ public class QueryProcessor {
             return s;
         }
 
+        if (query.toLowerCase().contains("multiplied")) {
+            String q = query.replaceAll("[A-Z|a-z]","");
+            String[] nums =  q.split(" ");
+
+            Integer sum = 1;
+            for (String n : nums) {
+                if (!n.equals("")) {
+                    sum*= Integer.parseInt(n);
+                }
+
+            }
+            String s = sum.toString();
+
+            return s;
+        }
+
         if (query.toLowerCase().contains("largest")) {
             String q = query.replaceAll("[A-Z|a-z]","");
             String[] nums =  q.split(":");

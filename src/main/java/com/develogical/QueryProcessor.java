@@ -34,7 +34,7 @@ public class QueryProcessor {
             return "PingPong";
         }
 
-        if (query.toLowerCase().contains("what is ")) {
+        if (query.toLowerCase().contains("plus")) {
             String q = query.replaceAll("[A-Z|a-z]","");
             String[] nums =  q.split(" ");
 
@@ -50,7 +50,7 @@ public class QueryProcessor {
             return s;
         }
 
-        if (query.toLowerCase().contains("which of the following ")) {
+        if (query.toLowerCase().contains("largest")) {
             String q = query.replaceAll("[A-Z|a-z]","");
             String[] nums =  q.split(":");
             nums = nums[1].split(" ");

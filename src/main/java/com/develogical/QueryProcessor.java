@@ -99,14 +99,14 @@ public class QueryProcessor {
 
             for (String n : nums) {
                 if (!n.equals("")) {
-                    int num = Integer.parseInt(n);
+                    int num = Integer.parseInt(n.split(" ")[1]);
                     if (Math.sqrt(num)% 1 == 0 && Math.cbrt(num) % 1 == 0) {
                         return n;
                     }
                 }
 
             }
-            return "";
+            return "none";
 
         }
 

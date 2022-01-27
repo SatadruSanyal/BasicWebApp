@@ -67,4 +67,11 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is 2020 multiplied by 30"),
                 containsString(x.toString()));
     }
+
+    @Test
+    public void bothSquareAndCube() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is both a square and a cube: 20950, 971, 2116, 676"),
+                containsString("none"));
+    }
+
 }
